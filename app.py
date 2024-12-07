@@ -12,8 +12,8 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import Model
 
 # Google Drive file IDs
-model_file_id = "https://drive.google.com/file/d/1s05lhAGFIfS7AiXJWmhA5ml_kbsM8an3/view?usp=sharing"
-weights_file_id = "https://drive.google.com/file/d/1H7A8lo6DrmYVCHG3zdUsIEtWi8ZtTPIe/view?usp=sharing" 
+model_file_id = "1s05lhAGFIfS7AiXJWmhA5ml_kbsM8an3"
+weights_file_id = "1H7A8lo6DrmYVCHG3zdUsIEtWi8ZtTPIe"
 
 # Download the model file
 def download_file(file_id, output_path):
