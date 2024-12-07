@@ -140,7 +140,7 @@ if uploaded_file:
 st.markdown(
     """
     <div class="footer">
-        Built with ❤️ by <b>Arjun Pesaru</b> and <b>Hiranmai D</b>
+        Built by <b>Arjun Pesaru</b> and <b>Hiranmai Devarasetty</b>
     </div>
     """,
     unsafe_allow_html=True,
