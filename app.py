@@ -11,6 +11,7 @@ from tensorflow.keras.applications.vgg16 import preprocess_input, VGG16
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import Model
 
+
 # Google Drive file IDs
 model_file_id = "1s05lhAGFIfS7AiXJWmhA5ml_kbsM8an3"
 weights_file_id = "1H7A8lo6DrmYVCHG3zdUsIEtWi8ZtTPIe"
@@ -24,6 +25,7 @@ def download_file(file_id, output_path):
 # Download model and weights
 download_file(model_file_id, "my_model.keras")
 download_file(weights_file_id, "vgg16_weights_tf_dim_ordering_tf_kernels.h5")
+
 
 # Load the tokenizer
 with open("tokenizer.pkl", "rb") as handle:
@@ -71,16 +73,75 @@ def generate_caption(photo):
     return in_text.replace(start_token, "").replace(end_token, "").strip()
 
 # Streamlit UI
-st.title("Image Caption Generator")
-st.sidebar.title("Options")
+st.set_page_config(
+    page_title="Image Caption Generator",
+    page_icon=":camera:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+# Header section
+st.markdown(
+    """
+    <style>
+        .main-header {
+            font-size: 40px;
+            color: #4CAF50;
+            text-align: center;
+        }
+        .sub-header {
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            color: #888;
+            margin-top: 50px;
+        }
+    </style>
+    <div class="main-header">📸 Image Caption Generator</div>
+    <div class="sub-header">Upload an image and let AI describe it!</div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Sidebar section
+st.sidebar.markdown(
+    """
+    ## Instructions
+    - Upload an image using the button below.
+    - Wait for the AI to process the image.
+    - View the generated caption on the main screen.
+    """
+)
 
 # Upload image
-uploaded_file = st.file_uploader("Choose an Image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader(
+    "Upload an image (JPG/PNG)", type=["jpg", "jpeg", "png"]
+)
 
 if uploaded_file:
-    image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image", use_column_width=True)
-    features = extract_features(image)
-    caption = generate_caption(features)
-    st.subheader("Generated Caption:")
-    st.write(caption)
+    col1, col2 = st.columns(2)
+    with col1:
+        # Display uploaded image
+        image = Image.open(uploaded_file)
+        st.image(image, caption="Uploaded Image", use_column_width=True)
+
+    with col2:
+        # Extract features and generate caption
+        features = extract_features(image)
+        caption = generate_caption(features)
+
+        # Display the generated caption
+        st.subheader("Generated Caption:")
+        st.success(caption)
+# Footer section
+st.markdown(
+    """
+    <div class="footer">
+        Built with ❤️ by <b>Arjun Pesaru</b> and <b>Hiranmai D</b>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
