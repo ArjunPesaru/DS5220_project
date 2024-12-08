@@ -75,11 +75,11 @@ If you want to test the application directly, visit our deployed site:
 | File Name                                | Description                                                                 |
 |-----------------------------------------|-----------------------------------------------------------------------------|
 | `app.py`                                | Main file to run the Streamlit app.                                         |
-| `my_model.keras`                        | Pre-trained image captioning model.                                        |
-| `vgg16_weights_tf_dim_ordering_tf_kernels.h5` | Pre-trained VGG16 weights for feature extraction.                          |
+| `my_model.keras`                        | Pre-trained image captioning model.(avaliable on my drive:)                                      |
+| `vgg16_weights_tf_dim_ordering_tf_kernels.h5` | Pre-trained VGG16 weights for feature extraction.(avaliable on my drive)                          |
 | `tokenizer.pkl`                         | Tokenizer file containing mappings for vocabulary and captions.            |
 | `requirements.txt`                      | List of Python libraries required to run the app.                          |
-| `Flickr_Data/`                          | Folder containing the Flickr8k dataset (to be downloaded separately).      |
+| `Flickr_Data/`                          | Folder containing the Flickr8k dataset (to be downloaded separately from kaggle).      |
 
 ---
 
