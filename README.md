@@ -4,6 +4,7 @@
 Author: Arjun Pesaru & Hiranmai Devarasetty
 
 
+![sample](https://github.com/user-attachments/assets/3c8db2d6-3e10-480c-af7f-e41dfc14ac13)
 
 This project demonstrates an image caption generator using a **VGG16 encoder** and **LSTM-based decoder**. A Streamlit app is provided for a user-friendly interface to upload images and generate captions.
 
