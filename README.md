@@ -1,6 +1,6 @@
 # DS5220_project
 # TITLE: Machine Learning Techniques to predict Captions
-## Working Model: https://image-caption9-gen.streamlit.app/ (You can test with the images present in the sample images for testing folder)
+## Working Model: https://image-caption9-gen.streamlit.app/ (You can test with the images present in the "SAMPLE IMAGES TO TEST" folder)
 Author: Arjun Pesaru & Hiranmai Devarasetty
 
 
