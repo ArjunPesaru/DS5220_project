@@ -91,7 +91,7 @@ If you want to test the application directly, visit our deployed site:
 
 
 For any issues, ensure all dependencies are installed and files are correctly placed in the directory
----
+------
 
 Enjoy generating captions! 😊
 
