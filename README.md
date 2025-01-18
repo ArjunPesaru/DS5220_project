@@ -20,8 +20,7 @@ This project demonstrates an image caption generator using a **VGG16 encoder** a
 ---
 
 ### Step 2: Install Required Libraries
-Ensure you have Python installed (preferably version 3.8 or above). Then, install the required Python libraries by running:
-
+Ensure you have Python installed (preferably version 3.8 or above). Then, install the required Python libraries by running
 ```bash
 pip install -r requirements.txt
 ```
